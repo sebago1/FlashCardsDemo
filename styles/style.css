@@ -1,5 +1,71 @@
 body
 {
 	color:white;
-	background-color: black;
+    background-color: #010718;
+    text-align: center;
+}
+
+.container
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/*************************** TOP ***************************/
+header
+{
+    text-align: center;
+}
+
+.content
+{
+    text-align: center;
+}
+
+#div_button_top_right
+{
+    text-align: right;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#div_button_top_right button
+{
+    background-color: #857485;
+    color: #305060!important;
+}
+
+#spEN
+{
+    font-weight: bold;
+}
+
+
+
+/*************************** CONTENT ***************************/
+.horizontal_wrap
+{
+    width: 100%;
+}
+
+.clear_float
+{
+    clear: both;
+	width: 1px;
+}
+
+.tab_all
+{
+    float: left;
+}
+
+.tab_header
+{
+    border: 3mm ridge brown;
+    width: 496px;
+    display: inline-block;
+    font-size: 21px;
+    height: 54px;
 }
