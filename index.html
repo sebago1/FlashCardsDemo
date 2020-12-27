@@ -16,33 +16,47 @@
 		<h2>Flash Cards Demo</h2> 
 	</header>
 
+	<!-- BUTTON FOR CHANGE LANGUAGE -->
 	<div id="div_button_top_right">
 		<button onclick="change_language_button()" id="change_language_button_style"> 
 			<span id="spEN">EN</span> / <span id="spPL">PL</span></button>
 	</div>
 
-	<!------------------------------ CONTENT ------------------------------>
+	<!------------------------------ TABLE ------------------------------>
 	<div class="content">
-		<div class="horizontal_wrap">
-			<div class="tab_all tab_header">Angielski</div>
-			<div class="tab_all tab_body" id="en">Cat</div>
-		</div>
+		<div class="centered">
+			<div class="horizontal_wrap">
+				<div class="tab_all tab_header">Angielski</div>
+				<div class="tab_all tab_body" id="en">Cat</div>
+			</div>
 
-		<div class="clear_float"></div>
+			<div class="clear_float"></div>
+			
+			<div class="horizontal_wrap">
+				<div class="tab_all tab_header">Polski</div>
+				<div class="tab_all tab_body" id="pl">Kot</div>
+			</div>
+
+			<div class="clear_float"></div>
+			
+			<div class="horizontal_wrap">
+				<div class="tab_all tab_header">Wymowa</div>
+				<div class="tab_all tab_body" id="pron">Kat</div>
+			</div>
+
+			<div class="clear_float"></div>
+
+		</div>
+		<div class="dis_block"></div>
+		<!------------------------------ BUTTONS ------------------------------>
+		<div class="centered">
+			<div id="div_button_1"><Button onclick="draw_previous()">Draw previous</Button></div>
+			<div id="div_button_2"><Button onclick="draw_next()">Draw next</Button></div>
+		</div>
 		
-		<div class="horizontal_wrap">
-			<div class="tab_all tab_header">Polski</div>
-			<div class="tab_all tab_body" id="pl">Kot</div>
-		</div>
+		<div id="div_button_3"><Button onclick="hide_show_button()">Hide / Show</Button></div>
 
-		<div class="clear_float"></div>
-		
-		<div class="horizontal_wrap">
-			<div class="tab_all tab_header">Wymowa</div>
-			<div class="tab_all tab_body" id="pron">Kat</div>
-		</div>
 
-		<div class="clear_float"></div>
 	</div>
 
 </div>

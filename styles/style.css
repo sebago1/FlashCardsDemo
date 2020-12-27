@@ -28,13 +28,14 @@ header
 {
     text-align: right;
     margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
 #div_button_top_right button
 {
     background-color: #857485;
-    color: #305060!important;
+    color: #305060 !important;
 }
 
 #spEN
@@ -43,11 +44,12 @@ header
 }
 
 
-
-/*************************** CONTENT ***************************/
+/*************************** TABLE ***************************/
 .horizontal_wrap
 {
-    width: 100%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .clear_float
@@ -60,12 +62,150 @@ header
 {
     float: left;
 }
-
 .tab_header
 {
     border: 3mm ridge brown;
     width: 496px;
     display: inline-block;
+    font-size: 25px;
+    height: 45px;
+    padding-top: 15px;
+}
+.tab_body
+{
+    border: 3mm ridge brown;
+    width: 496px;
+    display: inline-block;
     font-size: 21px;
-    height: 54px;
+    font-weight: bold;
+    height: 44px;
+    padding-top: 16px;
+}
+
+.centered
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.dis_block
+{
+    display: block;
+}
+
+/*************************** BUTTONS ***************************/
+button
+{
+    color: fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #60a3bc;
+    padding: 10px;
+	border-radius: 50px;
+    border: none;
+	transition: all 0.4s ease 0s;
+	padding-bottom: 20px;
+	width: 200px;
+	height: 40px;
+	margin: 10px;
+}
+button:hover
+{
+	text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+}
+
+#div_button_1
+{
+    display: inline-block;
+}
+#div_button_2
+{
+    display: inline-block;
+}
+#div_button_3 button
+{
+    background-color: #bba3bc;
+	color:#305060!important;
+}
+
+/*************************** SCREEN WIDTH - 1654  ***************************/
+@media only screen and (max-width: 1654px)
+{
+    .horizontal_wrap
+    {
+        display: inline-block;
+    }
+    .tab_all
+    {
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tab_body
+    {
+        color: darkred;
+    }
+}
+
+/*************************** SCREEN WIDTH - 1276  ***************************/
+@media only screen and (max-width: 1276px)
+{
+    #div_button_top_right
+    {
+        text-align: left;
+    }
+
+    #div_button_1
+    {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #div_button_2
+    {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #div_button_3
+    {
+        display: inline-block;
+    }
+
+    .horizontal_wrap
+    {
+        margin-top: 15px;
+    }
+}
+
+/*************************** SCREEN WIDTH - 575  ***************************/
+@media only screen and (max-width: 575px)
+{
+    .horizontal_wrap
+    {
+        margin-top: 10px;
+    }
+    .tab_header
+    {
+        width: 296px;
+        height:43px;
+        font-size: 21px;
+    }
+    .tab_body
+    {
+        width: 296px;
+        height:43px;
+        font-size: 19px;
+    }
+
+    button
+	{
+		width: 276px;
+		height: 30px;
+	}
 }
