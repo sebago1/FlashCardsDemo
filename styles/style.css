@@ -65,7 +65,7 @@ header
 .tab_header
 {
     border: 3mm ridge brown;
-    width: 496px;
+    width: 480px;
     display: inline-block;
     font-size: 25px;
     height: 45px;
@@ -74,7 +74,7 @@ header
 .tab_body
 {
     border: 3mm ridge brown;
-    width: 496px;
+    width: 480px;
     display: inline-block;
     font-size: 21px;
     font-weight: bold;
@@ -136,15 +136,20 @@ button:hover
 /*************************** SCREEN WIDTH - 1654  ***************************/
 @media only screen and (max-width: 1654px)
 {
+    
     .horizontal_wrap
     {
-        display: inline-block;
-    }
-    .tab_all
-    {
-        clear: both;
         margin-left: auto;
         margin-right: auto;
+        width: 98%;
+    }
+    .tab_header
+    {
+        width: 45%;
+    }
+    .tab_body
+    {
+        width: 45%;
     }
 }
 
@@ -176,19 +181,22 @@ button:hover
     .horizontal_wrap
     {
         margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
     }
     .tab_header
     {
-        width: 396px;
+        width: 45%;
     }
     .tab_body
     {
-        width: 396px;
+        width: 45%;
     }
 }
 
-/*************************** SCREEN WIDTH - 575  ***************************/
-@media only screen and (max-width: 575px)
+/*************************** SCREEN WIDTH - 755  ***************************/
+@media only screen and (max-width: 755px)
 {
     .horizontal_wrap
     {
@@ -196,13 +204,13 @@ button:hover
     }
     .tab_header
     {
-        width: 296px;
+        width: 98%;
         height:43px;
         font-size: 21px;
     }
     .tab_body
     {
-        width: 296px;
+        width: 98%;
         height:43px;
         font-size: 19px;
     }
