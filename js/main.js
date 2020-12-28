@@ -1,5 +1,7 @@
 window.onload = start;
 
+var numberOfWord = 0;
+
 function start()
 {
     document.getElementById("en").innerHTML = englishWords[0];
@@ -7,20 +9,48 @@ function start()
     document.getElementById("pron").innerHTML = "----";
 }
 
-//  BUTTON DRAW PREVIOUS
+//  CHANGE LANGUAGE BUTTON
+function changeLanguage() 
+{
+    
+}
+
+//  DRAW PREVIOUS BUTTON
 function drawPrev() 
 {
     
 }
 
-//  BUTTON DRAW NEXT 
+//  DRAW NEXT BUTTON
 function drawNext() 
+{
+    var lengthOfTab = polishWords.length - 1;
+
+    if(numberOfWord >= lengthOfTab)
+    {
+        numberOfWord = 0;
+
+        document.getElementById("en").innerHTML = englishWords[numberOfWord];
+        document.getElementById("pl").innerHTML = polishWords[numberOfWord];
+        document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+    }else
+    {
+        numberOfWord++;
+
+        document.getElementById("en").innerHTML = englishWords[numberOfWord];
+        document.getElementById("pl").innerHTML = polishWords[numberOfWord];
+        document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+    }
+}
+
+//  HIDE / SHOW BUTTON
+function hideShow() 
 {
     
 }
 
-//  BUTTON HIDE / SHOW
-function hideShow() 
+//  KEEP HIDE OR SHOW SYSTEM
+function hideOrShowSystem() 
 {
     
 }
