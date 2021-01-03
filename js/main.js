@@ -1,7 +1,6 @@
 window.onload = start;
 
 var numberOfWord = 0;
-var isSetLanguage = "en";
 var whichLanguage = "en";
 var hideOrShowVariable = "hide";
 
@@ -13,18 +12,37 @@ function start()
 }
 
 //  CHANGE LANGUAGE BUTTON
-/*
 function changeLanguage() 
 {
-    if (isSetLanguage == "pl") {
-        isSetLanguage = "en";
+    if (whichLanguage == "en") {
+        
         document.getElementById("en").innerHTML = "----";
         document.getElementById("pl").innerHTML = polishWords[numberOfWord];
         document.getElementById("pron").innerHTML = "----";
 
+        document.getElementById("spPL").style.fontWeight = "bold";
+        document.getElementById("spEN").style.fontWeight = "normal";
+
+        whichLanguage = "pl";
+        hideOrShowVariable = "hide";
+
+    }else if (whichLanguage == "pl") 
+    {
+        document.getElementById("en").innerHTML = englishWords[numberOfWord];
+        document.getElementById("pl").innerHTML = "----";
+        document.getElementById("pron").innerHTML = "----";
+
+        document.getElementById("spPL").style.fontWeight = "normal";
+        document.getElementById("spEN").style.fontWeight = "bold";
+
+        whichLanguage = "en";
+        hideOrShowVariable = "hide";
+    }else
+    {
+        alert("Something was wrong!! Language change doesn't work");
     }
 }
-*/
+
 //  DRAW PREVIOUS BUTTON
 function drawPrev() 
 {
