@@ -1,6 +1,9 @@
 window.onload = start;
 
 var numberOfWord = 0;
+var isSetLanguage = "en";
+var whichLanguage = "en";
+var hideOrShowVariable = "hide";
 
 function start()
 {
@@ -10,11 +13,18 @@ function start()
 }
 
 //  CHANGE LANGUAGE BUTTON
+/*
 function changeLanguage() 
 {
-    
-}
+    if (isSetLanguage == "pl") {
+        isSetLanguage = "en";
+        document.getElementById("en").innerHTML = "----";
+        document.getElementById("pl").innerHTML = polishWords[numberOfWord];
+        document.getElementById("pron").innerHTML = "----";
 
+    }
+}
+*/
 //  DRAW PREVIOUS BUTTON
 function drawPrev() 
 {
@@ -27,6 +37,8 @@ function drawPrev()
         document.getElementById("en").innerHTML = englishWords[numberOfWord];
         document.getElementById("pl").innerHTML = polishWords[numberOfWord];
         document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+
+        hideOrShowSystem();
     }else
     {
         numberOfWord--;
@@ -34,6 +46,8 @@ function drawPrev()
         document.getElementById("en").innerHTML = englishWords[numberOfWord];
         document.getElementById("pl").innerHTML = polishWords[numberOfWord];
         document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+
+        hideOrShowSystem();
     }
 }
 
@@ -49,6 +63,8 @@ function drawNext()
         document.getElementById("en").innerHTML = englishWords[numberOfWord];
         document.getElementById("pl").innerHTML = polishWords[numberOfWord];
         document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+
+        hideOrShowSystem();
     }else
     {
         numberOfWord++;
@@ -56,26 +72,71 @@ function drawNext()
         document.getElementById("en").innerHTML = englishWords[numberOfWord];
         document.getElementById("pl").innerHTML = polishWords[numberOfWord];
         document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+
+        hideOrShowSystem();
     }
 }
 
 //  HIDE / SHOW BUTTON
 function hideShow() 
 {
-    
+    if (hideOrShowVariable == "show") 
+    {
+        if (whichLanguage == "pl") 
+        {
+            document.getElementById("en").innerHTML = "----";
+            document.getElementById("pron").innerHTML = "----";
+
+        }else if (whichLanguage == "en") 
+        {
+            document.getElementById("pl").innerHTML = "----";
+            document.getElementById("pron").innerHTML = "----";
+        }
+
+        hideOrShowVariable = "hide";
+
+    }else if (hideOrShowVariable == "hide") 
+    {
+        document.getElementById("en").innerHTML = englishWords[numberOfWord];
+        document.getElementById("pl").innerHTML = polishWords[numberOfWord];
+        document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+
+        hideOrShowVariable = "show";
+    }
 }
 
 //  KEEP HIDE OR SHOW SYSTEM
 function hideOrShowSystem() 
 {
-    
+    if (hideOrShowVariable == "show") 
+    {
+        document.getElementById("en").innerHTML = englishWords[numberOfWord];
+        document.getElementById("pl").innerHTML = polishWords[numberOfWord];
+        document.getElementById("pron").innerHTML = pronunciation[numberOfWord];
+
+    }else if (hideOrShowVariable == "hide") 
+    {
+        if (whichLanguage == "pl") 
+        {
+            document.getElementById("en").innerHTML = "----";
+            document.getElementById("pron").innerHTML = "----";
+
+        }else if (whichLanguage == "en") 
+        {
+            document.getElementById("pl").innerHTML = "----";
+            document.getElementById("pron").innerHTML = "----";
+        }
+    }else
+    {
+        alert("Something was wrong!!");
+    }
 }
 
 //  SMART DATA BASE OF WORDS
 var englishWords = new Array(5);
 englishWords[0] = "1 Savour";
 englishWords[1] = "2 Doll";
-englishWords[2] = "3 Ceating";
+englishWords[2] = "3 Cheating";
 englishWords[3] = "4 Regret";
 englishWords[4] = "5 Suicide";
 
